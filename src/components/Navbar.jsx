@@ -5,7 +5,7 @@ const Navbar = () => {
     const cartItems = useSelector(state => state.cart.items);
     const cartCount = cartItems.reduce((total,item)=> total + item.quantity, 0);
     return (
-        <nav>
+        <nav className='navbar'>
             <Link to ="/">Products</Link>
             <Link to ="/cart">Cart ({cartCount})</Link>
         </nav>

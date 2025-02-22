@@ -7,7 +7,7 @@ const Cart = () => {
     const dispatch = useDispatch();
     const totalPrice = cartItems.reduce((total,item) => total + item.price * item.quantity, 0);
     return (
-        <div>
+        <div className = "add-to-cart">
             {cartItems.length === 0 ?
             <p>your cart is empty</p>:
             (

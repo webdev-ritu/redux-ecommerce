@@ -13,13 +13,13 @@ const ProductList = () => {
     if(loading) return <p>Loading...</p>;
     if(error) return <p>Error loading....</p>;
     return (
-        <div>
+        <div className="product-list">
             {products.map(product=>(
-                <div key={product.id}>
-                    <img src={product.image} alt={product.tittle} width="100"/>
+                <div className='product-card' key={product.id}>
+                    <img className='product-card-img' src={product.image} alt={product.tittle} width="100"/>
                     <h3>{product.title}</h3>
                     <p>{product.price}</p>
-                    <button onClick={()=>dispatch(addToCart(product))}>Add to Cart</button>
+                    <button className='add-to-cart' onClick={()=>dispatch(addToCart(product))}>Add to Cart</button>
                 </div>
             ))}
         </div>
